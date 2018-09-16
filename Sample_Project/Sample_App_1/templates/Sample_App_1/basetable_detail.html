@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'Sample_App_1_basetable_list' %}">BaseTable Listing</a></p>
+<table class="table">
+<tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>CustomerID</td><td>{{ object.CustomerID }}</td></tr>
+<tr><td>Account</td><td>{{ object.Account }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit BaseTable</a>
+
+{% endblock %}
